@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kamil Pawlik 254008</title>
+
+    <script src="https://kit.fontawesome.com/04b14b8e85.js" crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+
+    <header class="navbar">
+        <i class="fas fa-fire-alt"></i>
+        <button class="themeChecker" id="themeCheckerButton"></button>
+    </header>
+
+
+    <main class="panel">
+        <aside class="profile">
+            <div class="personal">
+                <img src="https://picsum.photos/id/1005/300/300" alt="profile picture">
+                <h4 class="muted">Hello, Bob!</h4>
+                <div class="centered">
+                    <i class="fas fa-envelope"></i>
+                    <i class="fas fa-phone-square-alt"></i>
+                    <i class="fas fa-cogs"></i>
+                </div>
+            </div>
+            <ul class="list">
+                <li><i class="fas fa-award"></i><span class="inner">Elem 1</span></li>
+                <li><i class="far fa-check-square"></i><span class="inner">Elem 2</span></li>
+                <li><i class="fas fa-download"></i><span class="inner">Elem 3</span></li>
+                <li><i class="fas fa-eraser"></i><span class="inner">Elem 4</span></li>
+                <li><i class="fas fa-flag-checkered"></i><span class="inner">Elem 5</span></li>
+                <li><i class="fas fa-heart"></i><span class="inner">Elem 6</span></li>
+            </ul>
+        </aside>
+        <section class="content">
+            <h2>Dashboard</h2>
+            <div class="dashboard">
+                <div class="elem badge_1"><i class="fas fa-ad"></i><span class="inner">Elem 1</span></div>
+                <div class="elem badge_2"><i class="fab fa-angellist"></i><span class="inner">Elem 2</span></div>
+                <div class="elem badge_3"><i class="fas fa-crosshairs"></i><span class="inner">Elem 3</span></div>
+                <div class="elem badge_4"><i class="fas fa-icons"></i><span class="inner">Elem 4</span></div>
+            </div>
+            <h2>Actions</h2>
+            <div class="actions">
+                <img src="https://picsum.photos/id/119/500/300" alt="dashboard panel">
+                <ul>
+                    <li class="info"><i class="fas fa-bell"></i><span class="inner">Info</span></li>
+                    <li class="info"><i class="fas fa-bell"></i><span class="inner">Info</span></li>
+                    <li class="alert"><i class="fas fa-exclamation-triangle"></i><span class="inner">Alert</span></li>
+                    <li class="good"><i class="fas fa-check-circle"></i><span class="inner">Good</span></li>
+                    <li class="bad"><i class="fas fa-bug"></i><span class="inner">Bad</span></li>
+                    <li class="info"><i class="fas fa-bell"></i><span class="inner">Info</span></li>
+                    <li class="info"><i class="fas fa-bell"></i><span class="inner">Info</span></li>
+                    <li class="good"><i class="fas fa-check-circle"></i><span class="inner">Good</span></li>
+                    <li class="good"><i class="fas fa-check-circle"></i><span class="inner">Good</span></li>
+                    <li class="alert"><i class="fas fa-exclamation-triangle"></i><span class="inner">Alert</span></li>
+                    <li class="info"><i class="fas fa-bell"></i><span class="inner">Info</span></li>
+                </ul>
+            </div>
+            <h2>Loading</h2>
+            <div class="loading"></div>
+            <h2>Recent</h2>
+            <div class="recent">
+                <div class="elem"><img src="https://picsum.photos/id/184/500/300" alt="recent 1"><div class="hidden">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae qui sapiente magnam labore officia molestiae aperiam nam praesentium vel magni, nesciunt est natus tempore reiciendis aspernatur cumque possimus perferendis? Reprehenderit.</div></div>
+                <div class="elem"><img src="https://picsum.photos/id/196/500/300" alt="recent 2"><div class="hidden">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates aperiam alias quo, dicta vero vitae dignissimos at nesciunt? Iusto ipsa sapiente qui sit exercitationem blanditiis molestiae pariatur hic quo perferendis.</div></div>
+                <div class="elem"><img src="https://picsum.photos/id/182/500/300" alt="recent 3"><div class="hidden">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum aut et necessitatibus adipisci odit consequuntur repudiandae pariatur incidunt, ducimus dolore perferendis magni doloribus. A modi, quibusdam perspiciatis in ullam laudantium.</div></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="summary"></footer>
+
+    <script>
+        const setTheme = () => {
+            [...document.querySelectorAll( '*' )].forEach( elem => {
+                elem.classList.toggle( '__theme-dark' );
+            });
+        }
+
+        document.addEventListener( 'DOMContentLoaded', () => {
+
+            const toggler = document.querySelector( '#themeCheckerButton' );
+            toggler.addEventListener( 'click', e => {
+                e.preventDefault();
+                setTheme();
+            });
+        });
+    </script>
+
+</body>
+</html>

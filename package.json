@@ -1,0 +1,16 @@
+{
+  "name": "scr",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "npx sass ./style/main.scss ./style.css --no-source-map && clear",
+    "serve": "npx live-server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.33.0"
+  }
+}

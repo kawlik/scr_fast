@@ -1,0 +1,97 @@
+* {
+    transition: all linear 0.2s;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+@import 'common.scss';
+
+/*   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+
+    @include flex( column, nowrap );
+
+    background-color: $color-background;
+    color: $color-font;
+
+    &.__theme-dark {
+        background-color: $dark-color-background;
+        color: $dark-color-font;
+    }
+
+    font-size: medium;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+
+    text-align: justify;
+    text-decoration: none;
+
+    overflow-x: hidden;
+    min-height: 100vh
+}
+
+/*   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   */
+
+header.navbar {
+
+    @include flex( row, nowrap, space-between );
+    gap: 10px;
+
+    width: 100vw;
+    height: 52px;
+
+    font-size: larger;
+    padding: 0 10vw;
+
+    background-color: $color-font;
+    color: $color-background;
+
+    &.__theme-dark {
+        background-color: $dark-color-font;
+        color: $dark-color-background;
+    }
+}
+
+main.panel {
+    
+    @include flex( row, nowrap, space-between, stretch, stretch );
+    gap: 10px;
+
+    flex-grow: 1;
+    width: 100vw;
+    height: auto;
+}
+
+footer.summary {
+
+    @include flex( row, nowrap );
+
+    padding: 30px;
+    width: 100vw;
+    height: auto;
+
+    position: relative;
+    bottom: 0;
+
+    background-color: $color-font;
+    color: $color-background;
+
+    &.__theme-dark {
+        background-color: $dark-color-font;
+        color: $dark-color-background;
+    }
+}
+
+/*   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   */
+
+@import 'header.scss';
+
+@import 'profile.scss';
+
+@import 'content.scss';

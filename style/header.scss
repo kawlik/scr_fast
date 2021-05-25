@@ -1,0 +1,47 @@
+header.navbar {
+    
+    i { font-size: x-large; }
+
+    button.themeChecker {
+
+        background-color: $color-background;
+
+        &.__theme-dark {
+            background-color: $dark-color-background;
+
+            &::before {
+                background-color: $color-background;
+                transform: translateX( -150% ) translateY( -50% );
+            }
+        }
+
+        border-radius: $radius-big;
+        cursor: pointer;
+
+        outline: none;
+        border: none;
+        padding: 5px;
+
+        height: 24px;
+        width: 58px;
+
+        position: relative;
+
+        &::before {
+
+            content: "";
+
+            background-color: $dark-color-background;
+            
+            width: 18px;
+            height: 18px;
+            border-radius: $radius-big;
+
+            position: absolute;
+            left: 50%;
+            top: 50%;
+
+            transform: translateX( 50% ) translateY( -50% );
+        }
+    }
+}

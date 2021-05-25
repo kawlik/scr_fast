@@ -1,0 +1,210 @@
+section.content {
+
+    @include flex( column, nowrap, flex-start );
+
+    flex-grow: 1;
+    height: auto;
+    gap: 10px;
+
+    padding: 20px;
+
+    background-color: $color-background;
+    color: $color-font;
+
+    &.__theme-dark {
+        background-color: $dark-color-background;
+        color: $dark-color-font;
+    }
+
+    h2 {
+        width: 100%;
+        font-weight: 300;
+        text-align: justify;
+    }
+
+    div.dashboard {
+
+        @include flex( row, nowrap );
+        gap: 20px;
+
+        height: auto;
+        width: 100%;
+
+        div.elem {
+
+            * {
+                width: 100%;
+                display: block;
+                margin: 15px 0;
+            }
+
+            i {
+                font-size: 56px;
+            }
+
+            flex-grow: 1;
+            height: 100%;
+            padding: 20px;
+
+            color: $color-light;
+            font-weight: 400;
+            font-size: larger;
+
+            &.badge_1 { background-color: $color-badge-1; };
+            &.badge_2 { background-color: $color-badge-2; };
+            &.badge_3 { background-color: $color-badge-3; };
+            &.badge_4 { background-color: $color-badge-4; };
+
+            &.__theme-dark {
+                &.badge_1 { background-color: $dark-color-badge-1; };
+                &.badge_2 { background-color: $dark-color-badge-2; };
+                &.badge_3 { background-color: $dark-color-badge-3; };
+                &.badge_4 { background-color: $dark-color-badge-4; };
+            }
+
+            cursor: pointer;
+            transition: all ease-in-out 0.2s;
+
+            &:hover {
+                transform: scale( 1.1 );
+                box-shadow: 0 0 10px $color-distinctive;
+            }
+        }
+    }
+
+    div.actions {
+
+        @include flex( row, wrap, flex-start, flex-start, flex-start );
+        width: 100%;
+        gap: 15px;
+
+        img {
+            height: auto;
+            width: 35%;
+        }
+
+        ul {
+            @include flex( column, nowrap );
+            flex-grow: 1;
+            list-style: none;
+            height: 100%;
+
+            li {
+
+                @include flex( row, nowrap );
+
+                border-top: 1px solid $color-third;
+                padding: 15px;
+                width: 100%;
+
+                font-size: large;
+
+                * {
+                    display: inline-block;
+                    padding: 0 5px;
+                }
+
+                span { flex-grow: 1; }
+                i { width: 32px; }
+
+
+                &.alert  { color: $color-badge-4; }
+                &.info   { color: $color-badge-3; }
+                &.good   { color: $color-badge-2; }
+                &.bad    { color: $color-badge-1; }
+
+                &.__theme-dark {
+                    &.alert  { color: $dark-color-badge-4; }
+                    &.info   { color: $dark-color-badge-3; }
+                    &.good   { color: $dark-color-badge-2; }
+                    &.bad    { color: $dark-color-badge-1; }
+                }
+            }
+        }
+    }
+
+    div.loading {
+
+        width: 100%;
+        height: 320px;
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 50%;
+
+            transform: translateX( -50% ) translateY( -50% );
+
+            width: 64px;
+            height: 64px;
+
+            border: 8px solid rgba( $color-primary, 0.2 );
+            border-top-color: rgba( $color-primary, 0.7 );
+
+            border-radius: 100%;
+            background-color: transparent;
+
+            animation-name: spin;
+            animation-timing-function: ease-in-out;
+            animation-duration: 1.2s;
+            animation-fill-mode: both;
+            animation-iteration-count: infinite;
+        }
+    }
+
+    div.recent {
+        
+        @include flex( row, nowrap );
+
+        flex-grow: 1;
+        height: 320px;
+        gap: 15px;
+
+        div.elem {
+
+            gap: 0;
+            overflow: hidden;
+            flex-grow: 1;
+            max-width: 500px;
+            height: 100%;
+            background-color: $color-light;
+
+            * {
+                @include flex( column, nowrap );
+
+                width: 100%;
+                height: 100%;
+            }
+            
+            &:hover div.hidden {
+                transform: translateY( -100% );
+            }
+
+            div.hidden {
+                width: 100%;
+                height: 100%;
+                z-index: 2;
+
+                transform: translateY( 100% );
+                transition: all ease-in-out 0.4s;
+
+                padding: 15px;
+                line-height: 150%;
+                background-color: rgba( $color-secondary, 0.5 );
+                font-size: larger;
+            }
+        }
+    }
+}
+
+/*   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   */
+
+@keyframes spin {
+    from {
+        transform: translateX( -50% ) translateY( -50% ) rotate(0);
+    } to {
+        transform: translateX( -50% ) translateY( -50% ) rotate(360deg);
+    }
+}

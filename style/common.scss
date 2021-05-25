@@ -1,0 +1,53 @@
+/*   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   */
+//  common
+
+$radius-std: 5px;
+$radius-big: 10px;
+
+/*   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   */
+//  light mode
+
+$color-background: #FFFFFF;
+$color-light: #F5F5F5;
+$color-font: #343434;
+$color-primary: #FF6600;
+$color-secondary: #FFDD11;
+$color-third: #999999;
+$color-subtle: #00FFFF;
+$color-distinctive: #4488FF;
+
+$color-badge-1: #FF4444;
+$color-badge-2: #44FF44;
+$color-badge-3: #4444FF;
+$color-badge-4: #FF44FF;
+
+/*   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   */
+//  dark theme
+
+$dark-color-background: invert( #FFFFFF );
+$dark-color-light: invert( #F5F5F5 );
+$dark-color-font: invert( #343434 );
+$dark-color-primary: invert( #FF6600 );
+$dark-color-secondary: invert( #FFDD11 );
+$dark-color-third: invert( #999999 );
+$dark-color-subtle: invert( #00FFFF );
+$dark-color-distinctive: invert( #4488FF );
+
+$dark-color-badge-1: invert( #FF4444 );
+$dark-color-badge-2: invert( #44FF44 );
+$dark-color-badge-3: invert( #4444FF );
+$dark-color-badge-4: invert( #FF44FF );
+
+/*   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   *   */
+//  mixins
+
+@mixin flex( $direction: column, $wrap: nowrap, $justify: space-around, $content: center, $items: center ) {
+
+    display: flex;
+    flex-direction: $direction;
+    flex-wrap: $wrap;
+
+    justify-content: $justify;
+    align-content: $content;
+    align-items: $items;
+}
