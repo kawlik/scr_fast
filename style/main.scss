@@ -1,5 +1,5 @@
 * {
-    transition: all linear 0.2s;
+    transition: all linear 0.4s;
     box-sizing: border-box;
     padding: 0;
     margin: 0;
@@ -45,6 +45,10 @@ header.navbar {
 
     width: 100vw;
     height: 52px;
+
+    position: sticky;
+    z-index: 100;
+    top: 0;
 
     font-size: larger;
     padding: 0 10vw;

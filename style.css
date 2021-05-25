@@ -1,5 +1,5 @@
 * {
-  transition: all linear 0.2s;
+  transition: all linear 0.4s;
   box-sizing: border-box;
   padding: 0;
   margin: 0;
@@ -47,6 +47,9 @@ header.navbar {
   gap: 10px;
   width: 100vw;
   height: 52px;
+  position: sticky;
+  z-index: 100;
+  top: 0;
   font-size: larger;
   padding: 0 10vw;
   background-color: #343434;
@@ -259,7 +262,11 @@ section.content div.dashboard {
   height: auto;
   width: 100%;
 }
+section.content div.dashboard.__theme-dark {
+  flex-direction: column;
+}
 section.content div.dashboard div.elem {
+  width: 100%;
   flex-grow: 1;
   height: 100%;
   padding: 20px;
@@ -318,6 +325,10 @@ section.content div.actions {
 section.content div.actions img {
   height: auto;
   width: 35%;
+}
+section.content div.actions img.__theme-dark {
+  transform: translateY(50%) rotate(90deg);
+  order: 10;
 }
 section.content div.actions ul {
   display: flex;
@@ -381,6 +392,9 @@ section.content div.loading {
   height: 320px;
   position: relative;
 }
+section.content div.loading.__theme-dark {
+  order: 4;
+}
 section.content div.loading::before {
   content: "";
   position: absolute;
@@ -406,9 +420,12 @@ section.content div.recent {
   justify-content: space-around;
   align-content: center;
   align-items: center;
-  flex-grow: 1;
+  width: 100%;
   height: 320px;
   gap: 15px;
+}
+section.content div.recent.__theme-dark {
+  order: 2;
 }
 section.content div.recent div.elem {
   gap: 0;
